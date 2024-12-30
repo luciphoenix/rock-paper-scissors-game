@@ -1,18 +1,19 @@
 
+// Global variables
 let humanChoice;
 let computerChoice;
 
 // Get human choice
 function getHumanChoice() {
-  humanChoice = prompt("Choose either rock, paper, or scissors: ");
-    humanChoice=setChoiceToNumber(humanChoice)
-    console.log(humanChoice);
+  humanChoice = prompt("Choose either rock, paper, or scissors:");
+    console.log(humanChoice); //Display choice before its been converted
+    humanChoice=setChoiceToNumber()   
 }
 
-function setChoiceToNumber(choice) {
-     if (choice == "rock") {
+function setChoiceToNumber() {
+     if (humanChoice == "rock") {
    return 1;
-  } else if (choice == "paper") {
+  } else if (humanChoice == "paper") {
     return 2;
   } else {
     return 3;
@@ -34,7 +35,7 @@ function generateComputerChoice() {
   console.log(computerChoice)
 }
 
-function checkChoices(humanChoice, computerChoice) {
+function checkChoices() {
   if (humanChoice == computerChoice) {
     console.log("draw");
   } else if (
@@ -50,8 +51,7 @@ function checkChoices(humanChoice, computerChoice) {
 
 function playGame(){
     getHumanChoice()
-  
     generateComputerChoice()
-    checkChoices(humanChoice, computerChoice)
+    checkChoices()
 }
 playGame()
