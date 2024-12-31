@@ -7,7 +7,7 @@ let computerChoice;
 gameCounter = 1; // 'let' can be omitted in variable declaration when 'use strict' is not used in the script
 
 // Play the game
-// playGame();   //commented out because i want the html page to show first
+addEventListener("load", playGame)   //The page should render before the game starts
 
 function playGame() {
   console.group(`game ${gameCounter}`); // implemented to group each game at the console side

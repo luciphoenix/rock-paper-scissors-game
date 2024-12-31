@@ -1,7 +1,17 @@
-    body{
+ *{
+    margin: 0;
+ }  
+   
+   body{
     min-height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+}
+
+p{
+    text-align: center;
+    line-height: 1.5;
 }
