@@ -9,6 +9,7 @@
   </head>
   <body>
     <h1>ROCK-PAPER-SCISSORS GAME</h1>
+    <p>Ready to play? select option below</p>
     <div class="options-container">
       <div class="options rock">
         <img src="./images/rock.png" alt="rock" />
@@ -20,11 +21,11 @@
         <img src="./images/scissors.png" alt="scissors" />
       </div>
     </div>
-    <p>
-      To play the Game, open the console by pressing
-      <strong>"ctl + shift + j"</strong> on you keyboard. <br />
-      You can also type <strong>playGame()</strong> at the console to start
-      playing.
-    </p>
+
+    <div class="score-board">
+      <div class="display-board player-board"></div>
+      <div class="display-board score"></div>
+      <div class="display-board computer-board"></div>
+    </div>
   </body>
 </html>

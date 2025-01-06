@@ -5,28 +5,43 @@
 *{
     margin: 0;
     font-size: 10px;
+    line-height: 1.5;
  }  
    
 h1{
     font-size: 4rem;
+    padding-top: 2rem;
     text-align: center;
+    margin-bottom: 5rem;
 }
 
 p{
     text-align: center;
-    line-height: 1.5;
+    font-size: 2rem;
+    margin-bottom: 5rem;
 }
 
-.options-container{
+.score-board, .options-container{
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-top: 5rem;
 }
-.options{
+.display-board, .options{
     width: 20rem;
     border: 2px solid black;
+    border-radius: 3rem;
+    overflow: hidden;
 }
 
 img{
     max-width: 100%;
+}
+
+.score-board{
+    border: 2px solid green;
+    margin: 0 auto;
+}
+.display-board{
+    
 }
