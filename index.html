@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock paper scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Permanent+Marker&family=Playwrite+AU+SA:wght@100..400&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
   </head>
@@ -22,26 +28,29 @@
       </div>
     </div>
 
-    <div class="score-board">
-      <div class="player-division">
-        <div class="display-board player-board">
-          <img src="./images/scissors.png" alt="scissors" />
+    <div class="score-board-container">
+      <h2>SCORE BOARD</h2>
+      <div class="score-board">
+        <div class="player-division">
+          <div class="display-board player-board">
+            <img src="./images/scissors.png" alt="scissors" />
+          </div>
+          <p class="score-alert">
+            Player's score <span class="player-score">3</span>
+          </p>
         </div>
-        <p class="score-alert">
-          Player's score <span class="player-score">3</span>
-        </p>
-      </div>
-      <div class="display-board score">
-        <p class="vs-text">VS</p>
-        <p class="message">Computer wins</p>
-      </div>
-      <div class="computer-division">
-        <div class="display-board computer-board">
-          <img src="./images/scissors.png" alt="scissors" />
+        <div class="display-board score">
+          <p class="vs-text">VS</p>
+          <p class="message">Computer wins</p>
         </div>
-        <p class="score-alert">
-          Computer's score <span class="computer-score">3</span>
-        </p>
+        <div class="computer-division">
+          <div class="display-board computer-board">
+            <img src="./images/scissors.png" alt="scissors" />
+          </div>
+          <p class="score-alert">
+            Computer's score <span class="computer-score">3</span>
+          </p>
+        </div>
       </div>
     </div>
   </body>

@@ -4,17 +4,33 @@
 
 *{
     margin: 0;
-    font-size: 10px;
+    font-size: calc(1rem,.75rem + 1.5vw, 2rem);
     line-height: 1.5;
+
+    font-family: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+font-weight: normal;
  }  
    
 h1{
     font-size: 4rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     text-align: center;
     margin-bottom: 5rem;
+
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Bebas Neue", serif;
 }
 
+img{
+    max-width: 100%;
+
+}
 /* p{
     text-align: center;
     font-size: 2rem;
@@ -25,31 +41,34 @@ h1{
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 5rem;
+    
 }
 .display-board, .options{
-    width: 20rem;
+    width: 10rem;
     border: 2px solid black;
-    border-radius: 3rem;
+    border-radius: 1.5rem;
     overflow: hidden;
 }
 
-img{
-    max-width: 100%;
-    object-fit: fill;
-}
 
-.score-board{
+.score-board-container{
+    margin-top: 3rem;
     border: 2px solid green;
     background-color: rgba(85, 60, 77, 0.075);
-    padding: 3rem;
+    padding: .7rem;
+    
 }
 
 
 .score-alert, .score-alert *{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
+    font-family: "Permanent Marker", serif;
+    font-weight: 200;
+    color: rgb(31, 37, 43);
 }
+
+
 .display-board:nth-child(2){
 display: flex;
 flex-flow: column wrap;
@@ -58,11 +77,15 @@ align-items: center;
 
 border: none;
 }
+
+
 .vs-text{
-font-size: 4rem;
+font-size: 2rem;
 font-weight: 900;
+font-family: "Press Start 2P", serif;
 }
 
 .message{
-    font-size: 2rem;
+    font-size: 1.2rem;
+    
 }
