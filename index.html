@@ -8,8 +8,8 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <h1>ROCK-PAPER-SCISSORS GAME</h1>
-    <p>Ready to play? select option below</p>
+    <h1>ROCK PAPER SCISSORS</h1>
+    <!-- <p class="">Ready to play? select option below</p> -->
     <div class="options-container">
       <div class="options rock">
         <img src="./images/rock.png" alt="rock" />
@@ -23,9 +23,26 @@
     </div>
 
     <div class="score-board">
-      <div class="display-board player-board"></div>
-      <div class="display-board score"></div>
-      <div class="display-board computer-board"></div>
+      <div class="player-division">
+        <div class="display-board player-board">
+          <img src="./images/scissors.png" alt="scissors" />
+        </div>
+        <p class="score-alert">
+          Player's score <span class="player-score">3</span>
+        </p>
+      </div>
+      <div class="display-board score">
+        <p class="vs-text">VS</p>
+        <p class="message">Computer wins</p>
+      </div>
+      <div class="computer-division">
+        <div class="display-board computer-board">
+          <img src="./images/scissors.png" alt="scissors" />
+        </div>
+        <p class="score-alert">
+          Computer's score <span class="computer-score">3</span>
+        </p>
+      </div>
     </div>
   </body>
 </html>

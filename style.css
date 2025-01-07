@@ -15,11 +15,11 @@ h1{
     margin-bottom: 5rem;
 }
 
-p{
+/* p{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 5rem;
-}
+} */
 
 .score-board, .options-container{
     display: flex;
@@ -36,12 +36,33 @@ p{
 
 img{
     max-width: 100%;
+    object-fit: fill;
 }
 
 .score-board{
     border: 2px solid green;
-    margin: 0 auto;
+    background-color: rgba(85, 60, 77, 0.075);
+    padding: 3rem;
 }
-.display-board{
-    
+
+
+.score-alert, .score-alert *{
+    text-align: center;
+    font-size: 2rem;
+}
+.display-board:nth-child(2){
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-items: center;
+
+border: none;
+}
+.vs-text{
+font-size: 4rem;
+font-weight: 900;
+}
+
+.message{
+    font-size: 2rem;
 }
