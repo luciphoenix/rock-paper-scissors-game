@@ -128,3 +128,21 @@ function gameOver() {
     : console.log("COMPUTER WINS THE GAME");
   console.log(`Computer: ${computerScore}\nPlayer: ${humanScore}`);
 }
+
+function resetGame(){
+
+}
+function playRound(){
+  
+}
+
+
+UI
+const playBtn = document.querySelector('.play-game')
+const resetBtn = document.querySelector('.reset-game')
+const playRoundBtn = document.querySelector('.play-round')
+
+playBtn.addEventListener('click', playGame)
+playRoundBtn.addEventListener('click', playRound)
+resetBtn.addEventListener('click', resetGame)
+
