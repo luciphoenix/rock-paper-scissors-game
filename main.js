@@ -1,3 +1,14 @@
+const playBtn = document.querySelector(".play-game");
+const resetBtn = document.querySelector(".reset-game");
+const playRoundBtn = document.querySelector(".play-round");
+const playerLiveScore = document.querySelector(".player-score")
+const computerLiveScore = document.querySelector('.computer-score')
+const scoreMessage= document.querySelector('.message')
+const options = document.querySelector('.options-container')
+const playerChoice = document.querySelector(".player-board img")
+
+
+
 // Global variables
 let gameRemaining = 5;
 let humanScore = 0;
@@ -7,7 +18,12 @@ let computerChoice;
 gameCounter = 1; // 'let' can be omitted in variable declaration when 'use strict' is not used in the script
 
 // Play the game
-addEventListener("load", playGame)   //The page should render before the game starts
+// addEventListener("load", playGame); //The page should render before the game starts
+
+options.addEventListener('click', playRound
+)
+
+
 
 function playGame() {
   console.group(`game ${gameCounter}`); // implemented to group each game at the console side
@@ -91,6 +107,7 @@ function checkWinner() {
   } else {
     gameMessage("Computer");
     incrementComputerScore();
+    
   }
   decrementGameRemaining();
   incrementGameCounter();
@@ -98,9 +115,12 @@ function checkWinner() {
 
 function incrementHumanScore() {
   ++humanScore;
+  playerLiveScore.textContent = humanScore
+
 }
 function incrementComputerScore() {
   ++computerScore;
+  computerLiveScore.textContent = computerScore
 }
 function decrementGameRemaining() {
   --gameRemaining;
@@ -108,10 +128,10 @@ function decrementGameRemaining() {
 function incrementGameCounter() {
   gameCounter++;
 }
-function gameMessage(player) {
-  player
-    ? console.log(`${player} wins this game`)
-    : console.log("The game is draw");
+function gameMessage(winner) {
+  winner
+    ? scoreMessage.textContent= `${winner} wins this game`
+    : scoreMessage.textContent= "The game is draw"
 }
 
 // check if the game is over
@@ -129,20 +149,19 @@ function gameOver() {
   console.log(`Computer: ${computerScore}\nPlayer: ${humanScore}`);
 }
 
-function resetGame(){
-
+function resetGame(e) {
+  gameRemaining = 5;
+  humanScore = 0;
+  computerScore = 0;
+  gameCounter = 1;
+console.log('hey');
 }
-function playRound(){
-  
-}
+function playRound(e) {
+ if (e.target.alt) playerChoice.setAttribute('src', `./images/${e.target.alt}.png`)}
 
 
-UI
-const playBtn = document.querySelector('.play-game')
-const resetBtn = document.querySelector('.reset-game')
-const playRoundBtn = document.querySelector('.play-round')
+// UI;
 
-playBtn.addEventListener('click', playGame)
-playRoundBtn.addEventListener('click', playRound)
-resetBtn.addEventListener('click', resetGame)
-
+playBtn.addEventListener("click", playGame);
+playRoundBtn.addEventListener("click", playRound);
+resetBtn.addEventListener("click", resetGame);
