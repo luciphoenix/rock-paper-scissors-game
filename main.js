@@ -1,6 +1,5 @@
 const playBtn = document.querySelector(".play-game");
 const resetBtn = document.querySelector(".reset-game");
-const playRoundBtn = document.querySelector(".play-round");
 const playerLiveScore = document.querySelector(".player-score")
 const computerLiveScore = document.querySelector('.computer-score')
 const scoreMessage= document.querySelector('.message')
@@ -173,5 +172,4 @@ playerLiveScore.textContent = 0
 // UI;
 
 playBtn.addEventListener("click", playGame);
-playRoundBtn.addEventListener("click", playRound);
 resetBtn.addEventListener("click", resetGame);

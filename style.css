@@ -107,9 +107,4 @@ button{
     font-family: "Lexend", serif;
     font-weight: 500;
 
-    &:disabled{
-    background-color: rgb(104, 109, 104);
-    cursor: text;
-
-    }
 }
