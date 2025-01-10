@@ -6,6 +6,8 @@ const computerLiveScore = document.querySelector('.computer-score')
 const scoreMessage= document.querySelector('.message')
 const options = document.querySelector('.options-container')
 const playerChoice = document.querySelector(".player-board img")
+const computerChoiceImg = document.querySelector(".computer-board img")
+
 
 
 
@@ -20,8 +22,16 @@ gameCounter = 1; // 'let' can be omitted in variable declaration when 'use stric
 // Play the game
 // addEventListener("load", playGame); //The page should render before the game starts
 
-options.addEventListener('click', playRound
-)
+options.addEventListener('click', playRound)
+
+function playRound(e) {
+   if (!(e.target.alt)) return console.log(e.target.alt)
+    getHumanChoice(e)
+    generateComputerChoice();
+    checkWinner();
+    checkGameOver();
+}
+ 
 
 
 
@@ -35,10 +45,9 @@ function playGame() {
 }
 
 // Get human choice
-function getHumanChoice() {
-  humanChoice = prompt(
-    `Choose either rock, paper, or scissors\n${gameRemaining} game remaining`
-  ).toLocaleLowerCase();
+function getHumanChoice(e) {
+  playerChoice.setAttribute('src', `./images/${e.target.alt}.png`)
+  humanChoice = e.target.alt
   console.log(humanChoice); //Display choice before its been converted
   setHumanChoiceToNumber();
 }
@@ -64,7 +73,7 @@ function setHumanChoiceToNumber() {
 function generateComputerChoice() {
   let random = Math.floor(Math.random() * 10);
   groupComputerChoice(random);
-  console.log(setComputerChoiceToName());
+  computerChoiceImg.setAttribute('src',`./images/${setComputerChoiceToName()}.png`);
 }
 
 function groupComputerChoice(random) {
@@ -130,34 +139,35 @@ function incrementGameCounter() {
 }
 function gameMessage(winner) {
   winner
-    ? scoreMessage.textContent= `${winner} wins this game`
+    ? scoreMessage.textContent= `${winner} wins`
     : scoreMessage.textContent= "The game is draw"
 }
 
 // check if the game is over
 function checkGameOver() {
-  gameRemaining ? playGame() : gameOver();
+  (humanScore == 5 || computerScore == 5) &&  gameOver() ;
 }
 
 function gameOver() {
   // used a ternary operator here instead of if...else clause
   humanScore === computerScore
-    ? console.log("THE GAME IS DRAW")
+    ? alert("THE GAME IS DRAW")
     : humanScore > computerScore
-    ? console.log("PLAYER WINS THE GAME")
-    : console.log("COMPUTER WINS THE GAME");
-  console.log(`Computer: ${computerScore}\nPlayer: ${humanScore}`);
+    ? alert("PLAYER WINS THE GAME")
+    : alert("COMPUTER WINS THE GAME");
+  resetGame()
 }
 
-function resetGame(e) {
+function resetGame() {
   gameRemaining = 5;
   humanScore = 0;
   computerScore = 0;
   gameCounter = 1;
-console.log('hey');
+scoreMessage.textContent = ''
+computerLiveScore.textContent = 0
+playerLiveScore.textContent = 0
+
 }
-function playRound(e) {
- if (e.target.alt) playerChoice.setAttribute('src', `./images/${e.target.alt}.png`)}
 
 
 // UI;
