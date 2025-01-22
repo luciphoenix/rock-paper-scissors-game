@@ -4,7 +4,7 @@
 
 *{
     margin: 0;
-    font-size: calc(1rem,.75rem + 1.5vw, 2rem);
+    font-size: clamp(1rem,.75rem + 1.5vw, 2rem);
     line-height: 1.5;
 
     font-family: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
@@ -15,8 +15,8 @@ font-weight: normal;
  }
    
 h1{
-    font-size: 4rem;
-    padding-top: 1rem;
+    font-size: 2rem;
+    padding-top: .2rem;
     text-align: center;
     font-family: "Jersey 10", serif;
     font-weight: 400;
@@ -24,7 +24,7 @@ h1{
 }
 h2{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: "Bebas Neue", serif;
     letter-spacing: .1rem;
 }
@@ -33,78 +33,80 @@ img{
     max-width: 100%;
 
 }
-/* p{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 5rem;
-} */
 
-.game-control,.score-board, .options-container{
+
+.game-control,
+.score-board, 
+.options-container{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: .7rem;
     
 }
-.display-board, .options{
-    width: 10rem;
-    border: 2px solid black;
-    border-radius: 1.5rem;
+.display-board,
+.options, .score-board > *{
+    width: 6rem;
     overflow: hidden;
 }
 
-
+.display-board,
+.options{ border: 2px solid black;
+    border-radius: .4rem;
+background-color: #af711480;}
 .score-board-container{
     border: 2px solid green;
     background-color: rgba(85, 60, 77, 0.075);
-    padding: .7rem;
-    max-width: 80%;
-    margin: 3rem auto;
+    padding: .2rem;
+    width: max(370px, 80%);
+    margin: 1.5rem auto;
     
 }
 
 
 .score-alert, .score-alert *{
     text-align: center;
-    font-size: 1rem;
+    font-size: .6rem;
     font-family: "Permanent Marker", serif;
     font-weight: 200;
     color: rgb(31, 37, 43);
 }
 
 
-.display-board:nth-child(2){
-display: flex;
-flex-flow: column wrap;
-justify-content: center;
-align-items: center;
+.score{
+    border: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
 
-border: none;
+    height: 100%;
 }
 
-
 .vs-text{
-font-size: 2rem;
+font-size: 1rem;
 font-weight: 900;
 font-family: "Press Start 2P", serif;
 }
 
 .message{
-    font-size: 1.2rem;
+    font-size: .7rem;
     
 }
 
 .game-control{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 button{
     background-color: rgb(37, 124, 26);
     border: none;
-    font-size: 1.2rem;
-    padding: .3rem 1rem;
+    font-size: .52rem;
+    padding: .2rem .5rem;
     border-radius: 0.3rem ;
     color: azure;
     font-family: "Lexend", serif;
     font-weight: 500;
 
 }
+
